@@ -1,0 +1,34 @@
+#logoutbutton{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #9bf6ff;
+    margin-right: 14px;
+    transition: 0.5s;
+}
+#logoutbutton:hover{
+    background-color: #fd0404;
+    /* transform: scale(1.2,1.2); */
+}
+#history{
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 14px;
+    color: rgb(8, 2, 1);
+    border: 1px solid #9bf6ff;
+    font-weight:100;
+    font-size: 16px;
+    background-color: #9bf6ff;
+    padding: 7px 7px 9px 7px;
+    border-radius: 4px;
+    transition: 1s;
+}
+
+#history:hover{
+    background-color: #ffffff;
+    font-size: 16px;
+    /* transform: scale(1.2,1.2); */
+    border: 1px solid #bfcace;
+    /* font-size: 19px; */
+}
+
+.style1{
+    opacity: 0;
+}

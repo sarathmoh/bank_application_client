@@ -1,0 +1,56 @@
+<!-- As a link -->
+<nav class="navbar navbar-light bg-dark ">
+    <a class="navbar-brand  " href="#" style="color:rgb(85, 98, 237);"><b>&#169; HAFC Bank Pvt.Ltd </b></a>
+    <h4 style="color: beige; text-align: center; ">{{aim}}</h4>
+    <span class="quote text-light">Giving you freedom...</span>
+
+
+</nav>
+
+
+<div class="container col-md-12 mt-0">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">Sign In</h3>
+
+            </div>
+            <div class="card-body">
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <!--event binding using $event -(change)="acnoChange($event)" -(change)="pswdChange($event)"-->
+                        <!--template referance  variable -#acno-->
+                        <!--two way binding using ngmodel-->
+                        <input type="text" name="acno" formControlName="acno" class="form-control" [placeholder]="accnum"
+                            id="login_accno" required>
+
+                    </div>
+                    <div *ngIf="this.loginForm.get('acno')?.errors&&this.loginForm.get('acno')?.touched"
+                        style="color: red;">lnvalid Username</div>
+                    
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" name="pswd" formControlName="pswd" class="form-control"
+                            placeholder="password" id="login_password" required>
+                    </div>
+                    <div *ngIf="this.loginForm.get('pswd')?.errors&&this.loginForm.get('pswd')?.touched"
+                        style="color: red;">Invalid Password</div>
+                    
+
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn float-right login_btn " style="width:50%">
+                    </div>
+                </form>
+            </div>
+            <p style="color:white;align-items:baseline; font-size: larger;">Not a user? <a routerLink="register">Register</a></p>
+        </div>
+    </div>
+</div>
+
+
